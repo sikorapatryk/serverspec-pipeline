@@ -22,7 +22,7 @@ pipeline {
 
     stage ('Test') {
       steps {
-          sshagent(credentials : ['nickfury-id']) {
+          sshagent(credentials : ['jenkins-ssh']) {
             sh '''
               rake spec
             '''
